@@ -1,122 +1,32 @@
 <!DOCTYPE html>
+<html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <style>
-      
- {
-  padding: 0;
-  margin: 0;
-}
-body {
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  font-family: sans-serif;
-}
-button:hover {
-  cursor: pointer;
-  background-color: green;
-}
-ul {
-  list-style-type: none; 
-}
-
-.container {
-  min-width: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-h1 {
-  font-size: 3rem;
-}
-
-.todo-form {
-  margin: 40px 0px;
-}
-.todo-input {
-  width: 250px;
-  border-bottom: 1px solid grey;
-  outline: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-right: 10px;
-  font-size: 1rem;
-}
-.add-button {
-  background-color: #0000ff;
-  color: #fff;
-  border-bottom: 1px solid grey;
-  outline: none;
-  border-radius: 5px;
-  padding: 7px;
-  font-size: 1.2rem;
-}
-
-.todo-items {
-  min-width: 350px;
-}
-
-.item {
-  background-color: #fff;
-  padding: 10px;
-  font-size: 1.1rem;
-}
-.item:first-child {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-}
-.item:last-child {
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-
-.checkbox {
-  margin-right: 10px;
-   border: 1px solid black;
-}
-.delete-button {
-  float: right;
-  background-color: blue;
-  border: 2px solid black;
-
-  border-radius: 7px;
-  padding: 2px 5px;
-  margin-left: 10px;
-  font-size: 1.1rem;
-  font-weight: 550;
-}
-
-.checked { 
-  text-decoration: line-through;
-}
-
-  </style>
-  
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo List</title>
-</head>
-<body>
-<div class="container">
-    <h1>Todo</h1>
-<form class="todo-form">
-      <input type="text" class="todo-input" placeholder="New task">
-      <button type="submit" class="add-button">Add</button>
-    </form>
-<ul class="todo-items">
-      <!-- dummy item -->
-      <li class="item" data-key="1594003133171">
-        <input class="checkbox" type="checkbox">
-        Go to Gym
-        <button class="delete-button">X</button>
-      </li>
-    </ul>
-  </div>
-  
-  <script type="text/javascript" src="script.js"></script>
-</body>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/7184df81b9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <p>ToDo List</p>
+    </header>
+    <main>
+      <div class="wrapper">
+        <p>ToDo List</p>
+        <div class="wrapper-add">
+          <input type="text" placeholder="New Task" id="new-todo" />
+          <button id="add-todo">Add</button>
+        </div>
+        <div class="wrapper-items">
+          <ul id="list-todo"></ul>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
